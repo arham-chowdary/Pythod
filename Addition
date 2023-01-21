@@ -1,0 +1,5 @@
+#2ADDITION
+num1= input('ENTER 1ST NUMBER :')
+num2= input('ENTER 2ND NUMBER :')
+sum= float(num1) + float(num2)
+print('Answer :{0}'.format(sum))
