@@ -1,0 +1,11 @@
+#16 string manupilation
+sent="My Name Is Arham"
+print(sent.lower())
+print(sent.upper())
+print(sent.lower().islower())
+print(sent.lower().isupper())
+print(sent.upper().isupper())
+print(sent.upper().islower())
+print(len(sent))
+print(sent.replace("Arham","Arham Chowdary"))
+print(sent.index("Is"))
