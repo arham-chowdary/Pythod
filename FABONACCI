@@ -1,0 +1,14 @@
+#Write a Python function to Display Fibonacci Sequence using Recursion
+
+def rec_fib(n):
+   if n <= 1:
+       return n
+   else:
+       return(rec_fib(n-1) + rec_fib(n-2))
+a =int(input('Enter the number'))
+if a <= 0:
+   print("Plese enter a positive integer")
+else:
+   print("Fibonacci sequence:")
+   for i in range(a):
+       print(rec_fib(i))
