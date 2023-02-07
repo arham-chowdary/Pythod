@@ -1,0 +1,11 @@
+#Write a Python function to check whether a number is in a given range.
+def given_range(n):
+  a=int(input('From : '))
+  b=int(input('Upto : '))
+
+  if n in range(a,b):
+        print(" %s is in the range"%str(n))
+  else :
+        print("The number is outside the given range.")
+i = int(input("Enter a number"))
+given_range(i)
