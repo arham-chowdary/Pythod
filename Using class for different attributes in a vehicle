@@ -1,0 +1,80 @@
+#Create a Vehicle class with max_speed and mileage instance attributes.
+class Vehicle:
+    def __init__(self, max_speed, mileage):
+        self.max_speed = max_speed
+        self.mileage = mileage
+        
+        
+car = Vehicle(220, 10000)
+print(car.max_speed, car.mileage)
+
+
+
+'''Create a Bus child class that inherits from the Vehicle class. The default fare charge
+of any vehicle is seating capacity * 100. If Vehicle is Bus instance, we need to add an
+extra 10% on full fare as a maintenance charge. So total fare for bus instance will
+become the final amount = total fare + 10% of the total fare.'''
+class Vehicle:
+    def __init__(self, name, mileage, capacity):
+        self.name = name
+        self.mileage = mileage
+        self.capacity = capacity
+
+    def fare(self):
+        return self.capacity * 100
+
+class Bus(Vehicle):
+    
+    def fare(self):
+        fare_car = self.capacity * 100 
+        total_fare = fare_car + (0.1 *fare_car)
+        return total_fare
+
+School_bus = Bus("School Volvo", 12, 50)
+print("Total Bus fare is:", School_bus.fare())
+
+
+
+#Determine which class a given Bus object belongs to (Check type of an object)
+class Vehicle:
+    def __init__(self, name, mileage, capacity):
+        self.name = name
+        self.mileage = mileage
+        self.capacity = capacity
+
+class Bus(Vehicle):
+    pass
+
+School_bus = Bus("School Volvo", 12, 50)
+print(type(School_bus))
+
+
+
+
+#Create child class Bus that will inherit all of the variables and methods of the Vehicle
+class Vehicle:
+    def __init__(self, name, max_speed, mileage):
+        self.name = name
+        self.max_speed = max_speed
+        self.mileage = mileage
+class Bus(Vehicle):
+    pass
+School_bus = Bus("School Volvo", 180, 12)
+print("Vehicle Name:", School_bus.name, "Speed:", School_bus.max_speed, "Mileage:", School_bus.mileage)
+
+
+
+
+#Create a Bus class that inherits from the Vehicle class. Give the capacity argument of
+#Bus.seating_capacity() a default value of 50.
+class Vehicle:
+    def __init__(self, name, max_speed, mileage):
+        self.name = name
+        self.max_speed = max_speed
+        self.mileage = mileage
+class bus(Vehicle):
+    
+    def seating_capacity(self, capacity=50):
+        return f"The seating capacity of a {self.name} is {capacity} passengers"
+    
+bus("school bus", 120, 2990).seating_capacity()
