@@ -1,0 +1,19 @@
+'''Given two trending topics and a bunch of tweets, write a Python program to count the number of
+tweets that contain each topic. You need to do this by putting together map(), reduce() and filter()
+functions.'''
+
+
+
+topic1 = "Python"
+topic2 = "Data Science"
+
+tweets = ["I love using Python for data analysis.","Data Science is the future of technology."]
+
+def count_tweets_with_topic(topic):
+    return reduce(lambda x, y: x + y, map(lambda tweet: 1 if topic in tweet else 0, tweets))
+
+topic1_count = count_tweets_with_topic(topic1)
+topic2_count = count_tweets_with_topic(topic2)
+
+print("Number of tweets with", topic1 + ":", topic1_count)
+print("Number of tweets with", topic2 + ":", topic2_count)
